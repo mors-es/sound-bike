@@ -23,24 +23,26 @@ void setup()
 void loop()
 
 {
-  val = analogRead(potpin);            // reads the value of the potentiometer (value between 0 and 1023)
- //Serial.println(val);
- // val = map(val, 50, 300, 0, 179);
+  val = analogRead(potpin);// reads the value of the potentiometer (value between 0 and 1023)
+
+  val = map(val, 0, 1050, 0, 50);
+ // if (val > 10){
+      Serial.println(val);
+ // }
      // scale it to use it with the servo (value between 0 and 180)
 //  for(i = 0 ;   i < 100 ; i++){
   //if(val > 20) { ts = ts + 1;}
   //delay(10);
 // }
-if(val > 150 ) {Serial.println("A"); time=0;};
+if(val > 110 ) {Serial.println("A"); time=0;};
 
-
- if(val < 20)
-{
+  if(val < 20)
+   {
    time++;
-}
+  }
 
 if(time > 1000){Serial.println("B"); time=0;}
 if(time > 45){Serial.println("C"); timo=0;}// myservo.write(val);    // sets the servo position according to the scaled value
   delay(15);
-    timo++;// waits for the servo to get there
+  timo++;// waits for the servo to get there
 }
