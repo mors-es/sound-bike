@@ -15,6 +15,22 @@ a {
   a:hover {
     text-decoration: underline; }
 
+#morseswebsite img{
+  position: relative;
+  top: 1.6em;
+}
+
+#morseswebsite a{
+  position: absolute;
+  font-size: 20px;
+  right: 30px;
+  color: white;
+  text-decoration: none;
+  font-weight: 200;
+  transition: opacity 0.2s; }
+  #morseswebsite a:hover {
+    opacity: 0.7;}
+
 .btn {
   display: inline-block;
   margin-bottom: 1rem;
